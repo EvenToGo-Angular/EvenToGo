@@ -6,18 +6,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { UsersComponent } from './users/users.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent,
+    SigninComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

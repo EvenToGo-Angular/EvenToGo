@@ -41,33 +41,21 @@ export class HomeComponent implements OnInit {
     console.log(event.target.value);
     let id = event.target.value;
     this.homeService.deleteEvent(id).subscribe(response => {
-       this.events.filter((item) => {return item.id !== id});
-       location.href = "modif";
+      this.events.filter((item) => { return item.id !== id });
+      location.href = "home";
     });
   }
   handleType(event: any, value: any) {
     event.preventDefault()
     console.log(value)
-    // axios.get("http://localhost:3000/api/event/selectAll").then((result) => {
-    //   this.events =  result.data.filter((event) => {
-    //    return event.type == value;
-    //   });
-    //     console.log(this.events)
     this.homeService.getAllEvents().subscribe(
       (result: any[]) => {
-        this.events =  result.filter((event) => {
+        this.events = result.filter((event) => {
+        }
+        )
       }
     )
-    // });
 
   }
-
-}
-function result(result: any) {
-  throw new Error('Function not implemented.');
-}
-
-function id(id: any) {
-  throw new Error('Function not implemented.');
 }
 
