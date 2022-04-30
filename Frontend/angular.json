@@ -27,9 +27,16 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+=======
+              "node_modules/angular2-busy/build/style/busy.css",
               "src/styles.css"
+             
+>>>>>>> d97c77445e07c2f7c11f89279e6fa6c95b282486
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
@@ -94,10 +101,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+            "scripts": []
           }
         }
       }

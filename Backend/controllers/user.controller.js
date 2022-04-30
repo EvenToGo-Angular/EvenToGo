@@ -1,6 +1,6 @@
 var db = require("../database-mysql");
 const bcrypt = require("bcrypt")
-
+const jwt = require('jsonwebtoken');
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 /**
@@ -83,6 +83,8 @@ var signUp = async (req, res) => {
 
 //khairi: user/signIn
 var signIn = (req, res) => {
+    let idd;
+    let ress;
     const email = req.body.email
     const password = req.body.password
     const sqlSel = `SELECT * FROM users WHERE email = ?`
@@ -92,6 +94,12 @@ var signIn = (req, res) => {
         }
         if (result) {
             try {
+
+                console.log("getuser"+JSON.stringify(result)  )
+                idd=JSON.stringify(result).id;
+                
+                ress=result;
+
                 bcrypt.compare(
                     password,
                     result[0].password,
@@ -104,17 +112,31 @@ var signIn = (req, res) => {
                             res.send("login failed");
                         }
                         if (rez === true) {
-                            res.send(['yes', result]);
-                        }
+                        ress='';
+
+                        ress=result;
+                         }
                     }
                 );
             } catch (err) {
-                res.send(err);
+                // res.send(err);
+            console.log(err)
+
             }
         } else {
-            res.send(err);
+            // res.send(err);
+            console.log(err)
 
         }
+         // create a token and send to frontend
+         
+         token = jwt.sign({ ress}, 'secretkey',{expiresIn:'1h'});
+     return res.status(200).json({
+         title: 'login success',
+        token: token,
+        result: ress,
+        ress:ress[0].id
+       })
     })
 }
 
