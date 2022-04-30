@@ -34,9 +34,8 @@ import interactionPlugin from '@fullcalendar/interaction';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
-
-  ],
+    
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
