@@ -7,13 +7,15 @@ import { SigninComponent } from './signin/signin.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     SigninComponent,
-    UsersComponent
+    UsersComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
