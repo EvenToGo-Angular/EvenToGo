@@ -10,6 +10,10 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CalendarComponent } from './calendar/calendar.component'; 
+import { FullCalendarModule } from '@fullcalendar/angular'; 
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
 @NgModule({
   declarations: [
@@ -18,18 +22,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     SignupComponent,
     SigninComponent,
-    UsersComponent
+    UsersComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    FullCalendarModule,
     HttpClientModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-
-
-  ],
+    
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
