@@ -1,0 +1,11 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: rgb(164, 18, 18);
+}
+
+.first{
+text-align: center
+}
