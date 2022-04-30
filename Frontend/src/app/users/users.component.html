@@ -1,1 +1,48 @@
 <p>users works!</p>
+<!-- <div ngIf="this.user.role== 'admin'" id="centeredDiv">
+    <h2 id="title">Create new user</h2>
+
+    <div id="element">
+      <label>Name :</label>
+      <input type="email" name="nameInput" placeholder="name" @change="nameInput($event)" required>
+    </div>
+    <div id="element">
+      <label>Email :</label>
+      <input type="email" name="emailInput" placeholder="email" @change="emailInput($event)" required>
+    </div>
+    <div id="element">
+      <label>Password :</label>
+      <input type="password" name="passwordInput" placeholder="password" @change="passwordInput($event)" required>
+    </div>
+    <div id="element">
+      <label>role :</label>
+      <input type="text" name="textInput" placeholder="role" @change="RoleInput($event)" required>
+    </div>
+    <div>
+      <button id="addBtn" @click="post">Send</button>
+      
+    </div>
+
+  </div> -->
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0" *ngFor="let item of dataArray">
+      <div class="col-md-4" >
+        <img
+          src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp"
+          alt="..."
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <h4 class="card-text">
+            {{item.email}}
+          </h4>
+          
+            <h2 class="text-muted">{{item.role}}</h2>
+        
+        </div>
+      </div>
+    </div>
+  </div>
