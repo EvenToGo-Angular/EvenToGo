@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div id="home">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -74,7 +76,7 @@
         <button [value]=elem.id href="#" class="btn btn-primary" (click)="edit($event)">
           Edit
         </button>
-        <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)" [routerLink]="['/home']"
+        <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)"
         >
           Delete
         </button>
