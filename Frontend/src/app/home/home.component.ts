@@ -42,7 +42,8 @@ export class HomeComponent implements OnInit {
     let id = event.target.value;
     this.homeService.deleteEvent(id).subscribe(response => {
       this.events.filter((item) => { return item.id !== id });
-      location.href = "home";
+      location.href = "/home";
+      alert("Event Deleted successfully.")
     });
   }
   handleType(event: any, value: any) {
@@ -51,6 +52,7 @@ export class HomeComponent implements OnInit {
     this.homeService.getAllEvents().subscribe(
       (result: any[]) => {
         this.events = result.filter((event) => {
+          return event.type == value;
         }
         )
       }
