@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { catchError, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
@@ -19,7 +20,7 @@ export class SigninComponent implements OnInit {
     email: '',
     password: '',
   });
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private route: Router) {}
 
   ngOnInit(): void {}
   onSubmit() {
@@ -27,14 +28,13 @@ export class SigninComponent implements OnInit {
 
     this.http
       .post(this.baseURL + 'api/user/signin', person)
-      .pipe(
-        map((response: any) => response.json()),
-        catchError((e: any) => {
-          console.log('ojhjghioufgiohghjioh' + e);
-          return throwError(e);
-        })
-      )
+      // .pipe(
+      //   map((response: any) => response.json()),
+      //   catchError((e: any) => {
+      //     console.log('ojhjghioufgiohghjioh' + e);
+      //     return throwError(e);
+      //   })
+      // )
 
-      .subscribe();
-  }
+      .subscribe(()=>{this.route.navigate(['/'])})  }
 }
