@@ -32,11 +32,17 @@ CREATE TABLE  favorite(
   FOREIGN KEY (id_event) REFERENCES events(id)
 );
 
+CREATE TABLE contacts (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  email varchar(40) NOT NULL,
+  subject varchar(50),
+  message varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
 --
 -- Déchargement des données de la table `users`
 --
-INSERT INTO `users` (`id`,`role`,`name`,`password`,`email`) VALUES
-(1,"admin","admin","123","admin@gmail.com");
 
 
 INSERT INTO `events` (`id`,`title`,`description`,`date`,`image`,`type`) VALUES
