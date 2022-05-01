@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
   selector: 'app-users',
@@ -7,15 +8,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  monObjet:any
   dataArray: any
   baseURL: string = 'http://localhost:3000/';
-  values = JSON.parse(localStorage.getItem('store_owner_ad_contacts')!);
+  role:any
+  
   constructor(private http: HttpClient) { 
-    // this.use=JSON.parse(localStorage.getItem("user"));
-    console.log(this.values)
+    this.role=sessionStorage.getItem("role");
+    console.log(this.role)
 
-    this.http.get(this.baseURL+'api/user/users').subscribe(data =>this.dataArray=data);
+    this.http.get(this.baseURL+'api/user/users').subscribe(data =>{
+      this.dataArray=data
+    // this.role=this.dataArray.role
+    });
+    
   }
 
   ngOnInit(): void {

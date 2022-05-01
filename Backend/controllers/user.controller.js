@@ -135,7 +135,9 @@ var signIn = (req, res) => {
          title: 'login success',
         token: token,
         result: ress,
-        ress:ress[0].id
+        ress:ress[0].id,
+        role:ress[0].role, 
+        username:ress[0].name
        })
     })
 }
