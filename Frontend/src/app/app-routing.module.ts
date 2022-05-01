@@ -1,3 +1,4 @@
+import { ContactsComponent } from './contacts/contacts.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'calendar', component: CalendarComponent },
+  { path: 'contacts', component: ContactsComponent },
 ];
 
 @NgModule({
