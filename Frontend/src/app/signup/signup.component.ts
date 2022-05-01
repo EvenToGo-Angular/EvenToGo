@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
     email: '',
     name: '',
     password: '',
-    role: '',
+    role: 'user',
   });
 
   constructor(private formBuilder: FormBuilder, 

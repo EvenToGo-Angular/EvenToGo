@@ -181,7 +181,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@^4.0.0", "@angular/common@~13.3.0", "@angular/common@13.3.4", "@angular/common@9 - 13":
+"@angular/common@^4.0.0", "@angular/common@>=9.0.0", "@angular/common@~13.3.0", "@angular/common@13.3.4", "@angular/common@9 - 13":
   "integrity" "sha512-vPZuUGWMXz6r30obBqH+iIG4Feq4YEK/4wUks7PEYGke8MXFPYsNKuHMhKCgYEhabD/4Mo4GEp3i18/3Kk72Mw=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-13.3.4.tgz"
   "version" "13.3.4"
@@ -250,6 +250,13 @@
   "integrity" "sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg=="
   "resolved" "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.10.1.tgz"
   "version" "0.10.1"
+
+"@auth0/angular-jwt@^5.0.2":
+  "integrity" "sha512-rSamC9mu+gUxoR86AXcIo+KD7xRIro+/iu1F2Ld85YAZEVKlpB5vYG+g0yGaEOqjtQWP/i0H6fi6XMGPVHSYYQ=="
+  "resolved" "https://registry.npmjs.org/@auth0/angular-jwt/-/angular-jwt-5.0.2.tgz"
+  "version" "5.0.2"
+  dependencies:
+    "tslib" "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7":
   "integrity" "sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg=="

@@ -1,4 +1,4 @@
-<p>users works!</p>
+<p>{{role}}</p>
 <!-- <div ngIf="this.user.role== 'admin'" id="centeredDiv">
     <h2 id="title">Create new user</h2>
 
@@ -25,6 +25,7 @@
 
   </div> -->
 <div class="card mb-3" style="max-width: 540px;">
+ 
     <div class="row g-0" *ngFor="let item of dataArray">
       <div class="col-md-4" >
         <img
@@ -34,8 +35,9 @@
         />
       </div>
       <div class="col-md-8">
+        
         <div class="card-body">
-          <h5 class="card-title">{{item.name}}</h5>
+          <h5 class="card-title">{{item.name}} {{dataArray.role}}</h5>
           <h4 class="card-text">
             {{item.email}}
           </h4>
@@ -46,3 +48,32 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="role=== 'admin'" id="centeredDiv">
+    <h2 id="title">Create new user or admin </h2>
+    <div id="element">
+      <label>Name :</label>
+      <input type="email" name="nameInput" placeholder="name"  required>
+    </div>
+    <div id="element">
+      <label>Email :</label>
+      <input type="email" name="emailInput" placeholder="email"  required>
+    </div>
+    <div id="element">
+      <label>Password :</label>
+      <input type="password" name="passwordInput" placeholder="password"  required>
+    </div>
+    <div id="element">
+      <label>role :</label>
+      <input type="text" name="textInput" placeholder="role"  required>
+    </div>
+    <div>
+      <button id="addBtn" >Send</button>
+      
+    </div>
+
+  </div>
+
+
+
+  
