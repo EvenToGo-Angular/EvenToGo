@@ -10,10 +10,16 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CalendarComponent } from './calendar/calendar.component'; 
-import { FullCalendarModule } from '@fullcalendar/angular'; 
+import { CalendarComponent } from './calendar/calendar.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -23,7 +29,8 @@ import interactionPlugin from '@fullcalendar/interaction';
     SignupComponent,
     SigninComponent,
     UsersComponent,
-    CalendarComponent
+    CalendarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
