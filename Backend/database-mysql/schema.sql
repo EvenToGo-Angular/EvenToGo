@@ -40,9 +40,7 @@ CREATE TABLE contacts (
   message varchar(255) NOT NULL,
   PRIMARY KEY (id)
 );
---
--- Déchargement des données de la table `users`
---
+
 
 
 INSERT INTO `events` (`id`,`title`,`description`,`date`,`image`,`type`) VALUES
