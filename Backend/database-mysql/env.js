@@ -1,3 +1,3 @@
 module.exports = {
-    myPassword: "0011223344",
+    myPassword: "1234",
 }

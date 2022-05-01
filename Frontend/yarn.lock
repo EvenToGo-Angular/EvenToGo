@@ -181,11 +181,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-<<<<<<< HEAD
-"@angular/common@^4.0.0", "@angular/common@>=9.0.0", "@angular/common@~13.3.0", "@angular/common@13.3.4", "@angular/common@9 - 13":
-=======
 "@angular/common@~13.3.0":
->>>>>>> 41951658fd8fe52814c95014c0879675e0434ae3
   "integrity" "sha512-vPZuUGWMXz6r30obBqH+iIG4Feq4YEK/4wUks7PEYGke8MXFPYsNKuHMhKCgYEhabD/4Mo4GEp3i18/3Kk72Mw=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-13.3.4.tgz"
   "version" "13.3.4"
