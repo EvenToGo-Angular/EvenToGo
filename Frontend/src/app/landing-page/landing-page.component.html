@@ -27,14 +27,28 @@
   <div class="container-fluid text-center">
     <h1 class="display-3">The Best Solution for Your Stress</h1>
     <p class="lead pb-4">We help you check nearby events and meet new people.</p>
-    <p><a id="signin" href="#more" class="btn btn-primary btn-lg" role="button">Learn More</a></p>
+    <p><a id="signin" href="#more" class="btn btn-primary btn-lg" role="button">Learn More <svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+        </svg></a></p>
     <p><a id="signup" href="#start" class="btn btn-primary btn-lg" role="button">Start Now!</a></p>
   </div>
 </header>
 <section id="more">
-  <p>
-    This is about us
-  </p>
+  <h2>EvenToGo Story</h2>
+  <div id="about-container">
+    <img src="../../assets/img/278719454_518845159791717_4455080078741522629_n.png">
+    <p>
+      EvenToGo is a website build & designed by a group of senior developers in 2022 .
+      Our main purpose is to make your life easy and help you discover new places and attend events from many categories
+      and in many places around you .
+      It's your best choice if you want to entertain yourself, meet new friends and have fun without any idea about you
+      destination,
+      We are Here to help you with an organized list of events so you can check and save your destination .
+    </p>
+  </div>
 </section>
 <section id="start">
   <h2>
@@ -58,7 +72,7 @@
   <div class="row">
 
     <!--Grid column-->
-    <form  class="col-md-9 mb-md-0 mb-5">
+    <form class="col-md-9 mb-md-0 mb-5">
       <form id="contact-form" name="contact-form" action="http://localhost:3000/api/contact/post" method="POST">
 
         <!--Grid row-->
