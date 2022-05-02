@@ -150,7 +150,8 @@ module.exports = {
 selectAll,
 selectOne,
 signUp,
-signIn
+signIn,
+
 };
 
 

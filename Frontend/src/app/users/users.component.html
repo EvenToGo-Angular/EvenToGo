@@ -52,28 +52,29 @@
   </div>
 
   <div *ngIf=" role === 'admin'" id="centeredDiv">
+    <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
     <h2 id="title">Create new user or admin </h2>
     <div id="element">
       <label>Name :</label>
-      <input type="email" name="nameInput" placeholder="name"  required>
+      <input formControlName="email" type="name" name="nameInput" placeholder="name"  required>
     </div>
     <div id="element">
       <label>Email :</label>
-      <input type="email" name="emailInput" placeholder="email"  required>
+      <input formControlName="email" type="email" name="emailInput" placeholder="email"  required>
     </div>
     <div id="element">
       <label>Password :</label>
-      <input type="password" name="passwordInput" placeholder="password"  required>
+      <input formControlName="password" type="password" name="passwordInput" placeholder="password"  required>
     </div>
-    <div id="element">
+    <!-- <div id="element">
       <label>role :</label>
       <input type="text" name="textInput" placeholder="role"  required>
-    </div>
+    </div> -->
     <div>
       <button id="addBtn" >Send</button>
       
     </div>
-
+  </form>
   </div>
 
 
