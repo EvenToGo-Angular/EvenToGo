@@ -9,6 +9,8 @@ import { SigninComponent } from './signin/signin.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { EventsComponent } from './events/events.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {UsersComponent} from './users/users.component'
+import {ProfileComponent} from './profile/profile.component'
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -19,6 +21,9 @@ const routes: Routes = [
   { path: 'events', component: EventsComponent },
   { path: '**', component: PageNotFoundComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
