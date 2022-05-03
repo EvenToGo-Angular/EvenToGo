@@ -46,7 +46,7 @@ export class SigninComponent implements OnInit {
         sessionStorage.setItem('role', this.dataReceived.role);
 
         var decodetToken = this.helper.decodeToken(this.dataReceived.token);
-        console.log(decodetToken.ress);
+        console.log(decodetToken.ress[0]);
         this.isLogin = true;
         this.route.navigate(['/home']);
       });
