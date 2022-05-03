@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { EventsComponent } from './events/events.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {UsersComponent} from './users/users.component'
 import {ProfileComponent} from './profile/profile.component'
 
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'calendar', component: CalendarComponent },
+  { path: 'events', component: EventsComponent },
+  { path: '**', component: PageNotFoundComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'users', component: UsersComponent },

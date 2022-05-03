@@ -1,3 +1,5 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EventsComponent } from './events/events.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -37,6 +39,8 @@ FullCalendarModule.registerPlugins([
     SigninComponent,
     UsersComponent,
     CalendarComponent,
+    EventsComponent,
+    PageNotFoundComponent,
     LandingPageComponent,
     ContactsComponent,
     ProfileComponent
