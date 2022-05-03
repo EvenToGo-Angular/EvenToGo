@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { catchError, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-signin',
@@ -19,7 +21,17 @@ export class SigninComponent implements OnInit {
     email: '',
     password: '',
   });
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+
+  isLogin: boolean = false;
+  dataReceived: any;
+
+  helper = new JwtHelperService();
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private route: Router
+  ) {}
 
   ngOnInit(): void {}
   onSubmit() {
@@ -27,14 +39,16 @@ export class SigninComponent implements OnInit {
 
     this.http
       .post(this.baseURL + 'api/user/signin', person)
-      .pipe(
-        map((response: any) => response.json()),
-        catchError((e: any) => {
-          console.log('ojhjghioufgiohghjioh' + e);
-          return throwError(e);
-        })
-      )
+      .subscribe((response) => {
+        this.dataReceived = response;
+        // console.log(this.dataReceived)
+        sessionStorage.setItem('token', this.dataReceived.token);
+        sessionStorage.setItem('role', this.dataReceived.role);
 
-      .subscribe();
+        var decodetToken = this.helper.decodeToken(this.dataReceived.token);
+        console.log(decodetToken.ress[0]);
+        this.isLogin = true;
+        this.route.navigate(['/home']);
+      });
   }
 }

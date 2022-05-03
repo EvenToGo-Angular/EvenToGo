@@ -81,7 +81,7 @@ var signUp = async (req, res) => {
     })
 }
 
-//khairi: user/signIn
+
 var signIn = (req, res) => {
     let idd;
     let ress;
@@ -130,12 +130,14 @@ var signIn = (req, res) => {
         }
          // create a token and send to frontend
          
-         token = jwt.sign({ ress}, 'secretkey',{expiresIn:'1h'});
+         token = jwt.sign({ress}, 'secretkey',{expiresIn:'1h'});
      return res.status(200).json({
          title: 'login success',
         token: token,
         result: ress,
-        ress:ress[0].id
+        ress:ress[0].id,
+        role:ress[0].role, 
+        username:ress[0].name
        })
     })
 }
@@ -148,7 +150,8 @@ module.exports = {
 selectAll,
 selectOne,
 signUp,
-signIn
+signIn,
+
 };
 
 

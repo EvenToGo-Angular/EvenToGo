@@ -1,22 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { user, UserService } from '../servece/user.service';
+import { JwtHelperService } from "@auth0/angular-jwt";
 @Component({
   selector: 'app-profile',
-  templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  
-  apiUser!: Observable<user[]>;
 
-  constructor(private userService:UserService) {
 
-    this.apiUser = this.userService.getUser()
-   
+  helper=new JwtHelperService()
+  role:any 
+  username: any;
+  email: any;
+  constructor() { 
+    var token:any=sessionStorage.getItem('token')
+    var decodetToken= this.helper.decodeToken(token)
+    this.username=decodetToken.ress[0].name
+    this.role=decodetToken.ress[0].role
+    this.email=decodetToken.ress[0].email
+    
+  }
 
-   }
+  ngOnInit(): void {
+  }
 
-  ngOnInit(): void {}
 
+ 
 }
