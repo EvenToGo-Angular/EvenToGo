@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {UsersComponent} from './users/users.component'
+import {ProfileComponent} from './profile/profile.component'
+
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
   { path: "home", component: HomeComponent },
@@ -17,7 +19,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'users', component: UsersComponent },
-
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
