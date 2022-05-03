@@ -81,7 +81,7 @@ var signUp = async (req, res) => {
     })
 }
 
-//khairi: user/signIn
+
 var signIn = (req, res) => {
     let idd;
     let ress;

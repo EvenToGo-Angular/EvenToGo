@@ -15,8 +15,14 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
+FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
   interactionPlugin
 ]);
@@ -30,7 +36,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     SigninComponent,
     UsersComponent,
     CalendarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
