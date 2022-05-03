@@ -12,7 +12,8 @@ import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { CalendarComponent } from './calendar/calendar.component'; 
-import { FullCalendarModule } from '@fullcalendar/angular'; 
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; 
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     SigninComponent,
     UsersComponent,
     CalendarComponent,
-    EventsComponent
+    EventsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
