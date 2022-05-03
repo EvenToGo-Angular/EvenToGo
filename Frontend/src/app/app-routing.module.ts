@@ -1,3 +1,5 @@
+import { ContactsComponent } from './contacts/contacts.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -9,13 +11,14 @@ import { EventsComponent } from './events/events.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  { path: "", component: LandingPageComponent },
   { path: "home", component: HomeComponent },
-  { path: "modif", component: NavbarComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'events', component: EventsComponent },
   { path: '**', component: PageNotFoundComponent },
+  { path: 'contacts', component: ContactsComponent },
 ];
 
 @NgModule({

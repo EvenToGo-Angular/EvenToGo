@@ -10,11 +10,22 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EventsComponent } from './events/events.component';
-import { CalendarComponent } from './calendar/calendar.component'; 
+import { CalendarComponent } from './calendar/calendar.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; 
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin
+]);
+
+FullCalendarModule.registerPlugins([ 
+  dayGridPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -25,8 +36,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SigninComponent,
     UsersComponent,
     CalendarComponent,
+<<<<<<< HEAD
     EventsComponent,
     PageNotFoundComponent
+=======
+    LandingPageComponent,
+    ContactsComponent
+>>>>>>> 9bd1814ed07f7ed6726cce420c8c64e466172bdb
   ],
   imports: [
     BrowserModule,

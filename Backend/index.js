@@ -3,6 +3,7 @@ const express = require("express");
 const userRoutes = require('./routes/user.routes');
 const eventRoutes = require('./routes/event.routes')
 const favoriteRoutes =require('./routes/favorite.routes')
+const contactRoutes =require('./routes/contact.routes')
 const bodyParser= require('body-parser')
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use("/api/user", userRoutes);
 app.use("/api/event", eventRoutes);
 app.use("/api/favorite",favoriteRoutes)
+app.use("/api/contacts",contactRoutes)
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 /**
