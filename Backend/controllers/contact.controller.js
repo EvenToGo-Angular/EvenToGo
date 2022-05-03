@@ -1,5 +1,5 @@
 var db = require("../database-mysql");
-const { select, add } = require("../database-mysql/contactModel.js");
+const { select, add, deleteOne } = require("../database-mysql/contactModel.js");
 
 
 
@@ -17,6 +17,16 @@ module.exports = {
     },
     postOne: function (req, res) {
         add(req.body, (err, results) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else {
+                res.status(201).json(results);
+            }
+        })
+    },
+    deleteContact: function (req, res) {
+        deleteOne(req.params.id, (err, results) => {
             if (err) {
                 res.status(500).send(err);
             }

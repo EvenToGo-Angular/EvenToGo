@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  role:any;
+  constructor() {
+    this.role=sessionStorage.getItem("role");
+  }
 
   ngOnInit(): void {
+  }
+  handleLogout(){
+    sessionStorage.clear();
   }
 
 }

@@ -21,7 +21,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use("/api/user", userRoutes);
 app.use("/api/event", eventRoutes);
 app.use("/api/favorite",favoriteRoutes)
-app.use("/api/contact",contactRoutes)
+app.use("/api/contacts",contactRoutes)
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 /**
