@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
   baseURL: string = 'http://localhost:3000/';
   values = JSON.parse(localStorage.getItem('store_owner_ad_contacts')!);
   constructor(private http: HttpClient) { 
-    // this.use=JSON.parse(localStorage.getItem("user"));
+     //this.use=JSON.parse(localStorage.getItem("user"));
     console.log(this.values)
 
     this.http.get(this.baseURL+'api/user/users').subscribe(data =>this.dataArray=data);
