@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'events', component: EventsComponent },
+  //{ path: '**', component: PageNotFoundComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'profile', component: ProfileComponent },
