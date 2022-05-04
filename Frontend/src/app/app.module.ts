@@ -13,12 +13,11 @@ import { SigninComponent } from './signin/signin.component';
 import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalendarComponent } from './calendar/calendar.component';
-import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from '@fullcalendar/interaction';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -31,10 +30,8 @@ FullCalendarModule.registerPlugins([
 ]);
 
 @NgModule({
-  declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
     SignupComponent,
     SigninComponent,
     UsersComponent,
@@ -43,6 +40,7 @@ FullCalendarModule.registerPlugins([
     PageNotFoundComponent,
     LandingPageComponent,
     ContactsComponent,
+<<<<<<< HEAD
     ProfileComponent
   ],
   imports: [
@@ -53,9 +51,11 @@ FullCalendarModule.registerPlugins([
     HttpClientModule,
     CommonModule,
     FormsModule,
+=======
+    ProfileComponent,
+>>>>>>> 30b6fa5b9ddd76eb53163694a26e99f37a17ad5c
     ReactiveFormsModule,
-    ],
   providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  bootstrap: [AppComponent],
+export class :AppModule { }
+)}

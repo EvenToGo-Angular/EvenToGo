@@ -11,9 +11,17 @@ import { FormBuilder } from '@angular/forms';
 export class UsersComponent implements OnInit {
   dataArray: any;
   baseURL: string = 'http://localhost:3000/';
+<<<<<<< HEAD
+=======
+  values = JSON.parse(localStorage.getItem('store_owner_ad_contacts')!);
+  formBuilder: any;
+  constructor(private http: HttpClient) { 
+     //this.use=JSON.parse(localStorage.getItem("user"));
+    console.log(this.values)
+>>>>>>> 30b6fa5b9ddd76eb53163694a26e99f37a17ad5c
   role: any;
 
-  adminForm = this.formBuilder.group({
+  const adminForm = this.formBuilder.group({
     name:'',
     email: '',
     password: '',

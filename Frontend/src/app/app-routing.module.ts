@@ -23,7 +23,10 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'profile', component: ProfileComponent },
+<<<<<<< HEAD
   {path:'about',component:AboutComponent}
+=======
+>>>>>>> 30b6fa5b9ddd76eb53163694a26e99f37a17ad5c
 ];
 
 @NgModule({
