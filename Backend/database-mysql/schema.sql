@@ -57,6 +57,6 @@ INSERT INTO `events` (`id`,`title`,`description`,`date`,`image`,`type`) VALUES
 
 
 
-/*  Execute this file from the command line by typing:
+/*  Execute this file from the command line by typing :
  *    mysql -u root -p < server/database-mysql/schema.sql
  *  to create the database and the tables.*/
