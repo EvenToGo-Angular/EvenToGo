@@ -18,7 +18,7 @@ export class CalendarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    axios.get("http://localhost:3000/api/event/selectAll").then((result) => {
+    axios.get(" http://localhost:3000/api/event/selectAll ").then((result) => {
       console.log(result.data);
       let events  = []
 
