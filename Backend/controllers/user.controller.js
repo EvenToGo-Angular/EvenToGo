@@ -130,7 +130,7 @@ var signIn = (req, res) => {
         }
          // create a token and send to frontend
          
-         token = jwt.sign({ ress}, 'secretkey',{expiresIn:'1h'});
+         token = jwt.sign({ress}, 'secretkey',{expiresIn:'1h'});
      return res.status(200).json({
          title: 'login success',
         token: token,
@@ -150,7 +150,8 @@ module.exports = {
 selectAll,
 selectOne,
 signUp,
-signIn
+signIn,
+
 };
 
 
