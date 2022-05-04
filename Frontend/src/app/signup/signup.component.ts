@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -22,23 +23,26 @@ export class SignupComponent implements OnInit {
     email: '',
     name: '',
     password: '',
-    role: '',
+    role: 'user',
   });
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+  constructor(private formBuilder: FormBuilder, 
+    private http: HttpClient,
+    private route: Router
+    ) {}
 
   ngOnInit(): void {}
   onSubmit() {
     let person = this.signupForm.value;
     this.http
       .post(this.baseURL + 'api/user/signup', person)
-      .pipe(
-        map((response: any) => {response.json(),location.href = "/"}),
-        catchError((e: any) => {
-          console.log('signup' + e);
-          return throwError(e);
-        })
-      )
-      .subscribe();
+      // .pipe(
+      //   map((response: any) => {response.json(),location.href = "/"}),
+      //   catchError((e: any) => {
+      //     console.log('signup' + e);
+      //     return throwError(e);
+      //   })
+      // )
+      .subscribe(()=>{this.route.navigate(['/signin'])})
   }
 }

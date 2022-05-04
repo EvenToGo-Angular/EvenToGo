@@ -1,48 +1,56 @@
-<p>users works!</p>
-<!-- <div ngIf="this.user.role== 'admin'" id="centeredDiv">
-    <h2 id="title">Create new user</h2>
 
+<app-navbar></app-navbar>
+
+<div  id="admin">
+  <div *ngIf=" role === 'admin'" id="centeredDiv">
+    <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+    <h2 id="title" >Create new user or admin </h2>
     <div id="element">
       <label>Name :</label>
-      <input type="email" name="nameInput" placeholder="name" @change="nameInput($event)" required>
+      <br>
+      <input formControlName="name" type="name" name="nameInput" placeholder="name"  required>
     </div>
     <div id="element">
       <label>Email :</label>
-      <input type="email" name="emailInput" placeholder="email" @change="emailInput($event)" required>
+      <br>
+      <input formControlName="email" type="email" name="emailInput" placeholder="email"  required>
     </div>
     <div id="element">
       <label>Password :</label>
-      <input type="password" name="passwordInput" placeholder="password" @change="passwordInput($event)" required>
-    </div>
-    <div id="element">
-      <label>role :</label>
-      <input type="text" name="textInput" placeholder="role" @change="RoleInput($event)" required>
+         <br>
+      <input formControlName="password" type="password" name="passwordInput" placeholder="password"  required>
     </div>
     <div>
-      <button id="addBtn" @click="post">Send</button>
-      
-    </div>
+      <button id="addBtn" class="btn btn-danger" >Send</button>
 
-  </div> -->
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0" *ngFor="let item of dataArray">
-      <div class="col-md-4" >
-        <img
-          src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp"
-          alt="..."
-          class="img-fluid"
-        />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{item.name}}</h5>
-          <h4 class="card-text">
-            {{item.email}}
-          </h4>
-          
-            <h2 class="text-muted">{{item.role}}</h2>
-        
-        </div>
-      </div>
     </div>
-  </div>
+  </form>
+</div>
+</div>
+
+  <div>
+    <div class="body">
+    <div class="home5">
+    <div *ngFor="let item of dataArray"  >
+        <div class="container3">
+            <h1>{{item.name}}</h1>
+            <div class="cardcontainer">
+                <div class="photo2"> <img src="https://www.kindpng.com/picc/m/150-1503993_check-man-user-avatar-person-done-complete-tick.png"
+                  alt="...">
+                </div>
+                <div class="content">
+                    <h1 class="txt4"> email: {{item.email}}</h1>
+
+                    <h1 class="txt4">Role:{{item.role}}</h1>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+     </div>
+
+
+
+
+
