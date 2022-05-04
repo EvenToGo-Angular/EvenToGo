@@ -23,12 +23,12 @@ app.use(fileUpload());
 app.use("/api/user", userRoutes);
 app.use("/api/event", eventRoutes);
 app.use("/api/favorite",favoriteRoutes)
-app.use("/api/contacts",contactRoutes)
+app.use("/api/contact",contactRoutes)
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-/**
- *Slim : Events/getAll 
- */
+
+
+ 
 
 
 
@@ -59,17 +59,7 @@ app.post("/addEvent", (req, res) => {
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-//Youssef : Events/delete
-// app.delete("/deleteEvent", (req, res) => {
-//   items.deleteEvent(id, (err, events) => {
-//     if (err) {
-//       console.log(err)
-//     }
-//     else {
-//       res.json(events)
-//     }
-//   })
-// })
+
 
 
 
@@ -80,17 +70,7 @@ app.post("/addEvent", (req, res) => {
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-//  Youssef : Events/put
-// app.modif("/deleteEvent", (req, res) => {
-//   items.modifEvent(id, (err, events) => {
-//     if (err) {
-//       console.log(err)
-//     }
-//     else {
-//       res.json(events)
-//     }
-//   })
-// })
+
 
 
 
@@ -100,9 +80,9 @@ app.post("/addEvent", (req, res) => {
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-/**
- * Fradj : User/getAll
- */
+
+
+ 
 
 
 
@@ -112,9 +92,6 @@ app.post("/addEvent", (req, res) => {
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-/**
- * Fradj : User/remove
- */
 
 
 

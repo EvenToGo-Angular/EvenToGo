@@ -1,4 +1,4 @@
-import { HomeService } from './../home.service';
+import { HomeService } from '../services/home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) { }
   events = []
-  user: object = {}
+  user: any = {}
 
   ngOnInit(): void {
     this.getData();
@@ -25,13 +25,14 @@ export class HomeComponent implements OnInit {
   }
 
   postFavorite(event: any) {
-    console.log(event.target.value);
-    const fav = {
-      id_event: event.target.value,
-      id_user: this.user
-    }
+    event.preventDefault();
+    let id = event.target.value;
+    sessionStorage.setItem("id_event", id);
+    sessionStorage.setItem("id_user", this.user);
+    location.href = "/favorite";
   }
   edit(event: any) {
+    event.preventDefault()
     console.log(event.target.value);
     sessionStorage.setItem("id", event.target.value)
     location.href = "/modif";
