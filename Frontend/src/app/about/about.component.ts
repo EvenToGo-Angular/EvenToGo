@@ -14,7 +14,7 @@ export class AboutComponent  {
   
    goToUrl1(): void {
    this.document.location.href = 'https://github.com/ALOU19'}
-    goToUrl12(): void {
+    goToUrl2(): void {
      this.document.location.href = 'https://github.com/amine-selmi'}
       goToUrl3(): void {
        this.document.location.href = 'https://github.com/Youssef-Bedoui'}
