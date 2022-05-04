@@ -11,14 +11,6 @@ import { FormBuilder } from '@angular/forms';
 export class UsersComponent implements OnInit {
   dataArray: any;
   baseURL: string = 'http://localhost:3000/';
-<<<<<<< HEAD
-=======
-  values = JSON.parse(localStorage.getItem('store_owner_ad_contacts')!);
-  formBuilder: any;
-  constructor(private http: HttpClient) { 
-     //this.use=JSON.parse(localStorage.getItem("user"));
-    console.log(this.values)
->>>>>>> 30b6fa5b9ddd76eb53163694a26e99f37a17ad5c
   role: any;
 
   const adminForm = this.formBuilder.group({
@@ -45,4 +37,7 @@ export class UsersComponent implements OnInit {
       .post(this.baseURL + 'api/user/signup', person)
       .subscribe((response) => console.log('yess'));
   }
-}
+}  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+

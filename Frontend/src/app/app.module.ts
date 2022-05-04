@@ -40,20 +40,7 @@ FullCalendarModule.registerPlugins([
     PageNotFoundComponent,
     LandingPageComponent,
     ContactsComponent,
-<<<<<<< HEAD
-    ProfileComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    FullCalendarModule,
-    HttpClientModule,
-    CommonModule,
-    FormsModule,
-=======
     ProfileComponent,
->>>>>>> 30b6fa5b9ddd76eb53163694a26e99f37a17ad5c
     ReactiveFormsModule,
   providers: [],
   bootstrap: [AppComponent],
