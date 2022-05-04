@@ -27,10 +27,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "font-awesome": "^4.7.0",
-<<<<<<< HEAD
-=======
     "jquery": "^3.6.0",
->>>>>>> 605b3b4eecd9ee002ed8f051b125abb786942cc2
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
