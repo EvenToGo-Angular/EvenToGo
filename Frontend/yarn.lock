@@ -161,7 +161,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@~13.3.0", "@angular/common@13.3.4", "@angular/common@9 - 13":
+"@angular/common@>=9.0.0", "@angular/common@~13.3.0", "@angular/common@13.3.4", "@angular/common@9 - 13":
   "integrity" "sha512-vPZuUGWMXz6r30obBqH+iIG4Feq4YEK/4wUks7PEYGke8MXFPYsNKuHMhKCgYEhabD/4Mo4GEp3i18/3Kk72Mw=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-13.3.4.tgz"
   "version" "13.3.4"
@@ -192,9 +192,9 @@
     "tslib" "^2.3.0"
 
 "@angular/core@>=10.0.0", "@angular/core@>=12.0.0", "@angular/core@~13.3.0", "@angular/core@13.3.4", "@angular/core@9 - 13":
-  "integrity" "sha512-PqPwx9oaV0Bh0m0fdI2jtXUC6s04jfD4vyzB4sjEuRI9pRUnZ6M5hZ5Vn/KJVZyt411MevbJfqzUVf0W+GDZew=="
-  "resolved" "https://registry.npmjs.org/@angular/core/-/core-13.3.4.tgz"
-  "version" "13.3.4"
+  "integrity" "sha512-lf+Be8dDRvz8J+QFR2RxS3BBfgGM4eWq4bI1+k/aqDnM6OW4pQXdq8Lzae8SxN48u1NxB1M/1bbc9LcrChrj2Q=="
+  "resolved" "https://registry.npmjs.org/@angular/core/-/core-13.3.5.tgz"
+  "version" "13.3.5"
   dependencies:
     "tslib" "^2.3.0"
 
@@ -230,6 +230,13 @@
   "integrity" "sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg=="
   "resolved" "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.10.1.tgz"
   "version" "0.10.1"
+
+"@auth0/angular-jwt@^5.0.2":
+  "integrity" "sha512-rSamC9mu+gUxoR86AXcIo+KD7xRIro+/iu1F2Ld85YAZEVKlpB5vYG+g0yGaEOqjtQWP/i0H6fi6XMGPVHSYYQ=="
+  "resolved" "https://registry.npmjs.org/@auth0/angular-jwt/-/angular-jwt-5.0.2.tgz"
+  "version" "5.0.2"
+  dependencies:
+    "tslib" "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7":
   "integrity" "sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg=="
@@ -6148,9 +6155,9 @@
   "version" "1.0.9"
 
 "typescript@>=4.4.2 <4.7", "typescript@>=4.4.3 <4.7", "typescript@~4.6.2":
-  "integrity" "sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.6.3.tgz"
-  "version" "4.6.3"
+  "integrity" "sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.6.4.tgz"
+  "version" "4.6.4"
 
 "ua-parser-js@^0.7.30":
   "integrity" "sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ=="
