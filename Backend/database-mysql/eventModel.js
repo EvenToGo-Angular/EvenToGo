@@ -23,10 +23,11 @@ module.exports = {
         });
       },
 
-    add: function (event) {
+    add: function (event, callback) {
         const sql = "INSERT INTO events SET ?";
-        console.log(event,'from add model')
-        conn.query(sql, event);
+        conn.query(sql, event, function (error, results) {
+            callback(error, results);
+        });
     },
     modifOne: function (event, id, callback) {
         const sql = "UPDATE events SET ? WHERE id=?";

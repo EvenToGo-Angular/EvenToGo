@@ -1,89 +1,61 @@
-<app-navbar></app-navbar>
-<div style="margin-top: 100px">
-  <!-- create Event Form -->
+<div class="container mt-3 " >
+  <div class="row">
+    <div class="col">
+      <p class="h3 ">Add Event</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt
+        accusamus quae sequi hic aspernatur. Dignissimos nulla minus, harum
+        quam, ipsum repudiandae possimus sapiente excepturi ex mollitia eos?
+        Dolor, veniam?
+      </p>
+    </div>
+  </div>
+</div>
 
-  <div class="container py-3 shadow">
-    <div class="row">
-      <p class="h3 addEvent">Add Event</p>
-      <div class="col">
-        <form [formGroup]="addEventForm" (ngSubmit)="onSubmit()">
-          <div class="mb-2 py-1">
-            <input
-              formControlName="title"
-              class="form-control"
-              placeholder="title"
-              type="text"
-            />
-          </div>
-          <div class="mb-2 py-1">
-            <textarea
-              formControlName="description"
-              class="form-control"
-              id="textAreaExample"
-              placeholder="description"
-              rows="4"
-            ></textarea>
-          </div>
-          <div class="form-outline"></div>
-          <div class="mb-2 py-1">
-            <select
-              name="types"
-              id="types"
-              style="width: 100%; height: 50px"
-              (change)="handleTypeEvent($event)"
-            >
-              <option hidden selected>select event type ...</option>
-              <option value="Cultural">Cultural</option>
-              <option value="Entertainment">Entertainment</option>
-              <option value="Social">Social</option>
-              <option value="Religious">Religious</option>
-            </select>
-          </div>
-          <div class="mb-2 py-1">
-            <input
-              formControlName="date"
-              class="form-control"
-              placeholder="date"
-              type="date"
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlFile1" class="addEvent"
-              >select event photo:</label
-            >
-            <input
-              type="file"
-              class="form-control-file"
-              (change)="onFileChange($event)"
-            />
-          </div>
-          <div class="mb-2 py-2">
-            <input
-              class="btn btn-success"
-              value="Create event"
-              type="submit"
-              style="width: 100%"
-            />
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-4">
-        <div class="imagePlace"> 
-          <img
-            *ngIf="url; else elseBlock"
-            [src]="url"
-            alt="image"
-            class="rounded imageEvent"
-          />
-          <ng-template #elseBlock>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBQUOPilifGV4DMwcNLB2NK1E0GVCjQRtZg&usqp=CAU"
-              alt="image"
-              class="rounded imageEvent"
-            />
-          </ng-template>
+<!-- create Event Form -->
+
+<div class="container border border-primary py-3">
+  <div class="row">
+    <div class="col">
+      <form>
+
+        <div class="mb-2 py-1">
+          <input class="form-control" placeholder="title" type="text" />
         </div>
-      </div>
+        <div class="mb-2 py-1">
+          <input class="form-control" placeholder="description" type="text" />
+        </div>
+        <div class="mb-2 py-1">
+          <select name="types" id="types" style="width: 100%">
+            <option hidden selected>select event type ...</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Social">Social</option>
+            <option value="Religious">Religious</option>
+          </select>
+        </div>
+        <div class="mb-2 py-1">
+          <input class="form-control" placeholder="date" type="date" />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">select event photo:</label>
+          <input
+            type="file"
+            class="form-control-file"
+            
+          />
+        </div>
+        <div class="mb-2 py-2">
+          <input class="btn btn-success" value="Create event" type="submit" style="width: 100%;"/>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBQUOPilifGV4DMwcNLB2NK1E0GVCjQRtZg&usqp=CAU"
+        alt=""
+        class="rounded"
+      />
     </div>
   </div>
 </div>
