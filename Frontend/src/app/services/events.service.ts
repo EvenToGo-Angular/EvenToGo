@@ -14,7 +14,7 @@ export class EventsService {
   //add event
   public addEvent(event:any){
     let dataUrl: string = `${this.serverUrl}/add`;
-    return this.http.post(dataUrl,event).pipe(catchError(this.handleError))
+    return this.http.post(dataUrl,event,{responseType: 'text' }).pipe(catchError(this.handleError))
   }
 
   //Error handling
