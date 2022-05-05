@@ -64,6 +64,6 @@ INSERT INTO `contacts` (`id`,`name`,`email`,`subject`,`message`) VALUES
   (6,"Kais Mellah","kais@rahal.com","Subject test 6", "This is a test message from Kais");
 
 
-/*  Execute this file from the command line by typing :
+/*  Execute this file from the command line by typing:
  *    mysql -u root -p < server/database-mysql/schema.sql
  *  to create the database and the tables.*/
