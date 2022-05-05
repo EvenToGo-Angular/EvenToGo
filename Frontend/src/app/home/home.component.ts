@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   postFavorite(event: any) {
-   // 432
+   
     event.preventDefault();
     let id = event.target.value;
     console.log(event)
@@ -35,18 +35,13 @@ export class HomeComponent implements OnInit {
     axios.post("http://localhost:3000/api/favorite/addfav" ,obj).then(res=> {
 if(res.data=="Done"){
 console.log("Event Added")
-
 }
 else 
-{console.log("error") ;
-
+{
+  console.log("error") ;
 }
-
-
-
 })
-
-  }
+}
   edit(event: any) {
   
     console.log(event.target.value);

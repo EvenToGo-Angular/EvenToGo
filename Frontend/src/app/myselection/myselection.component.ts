@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import axios from 'axios';
 
 @Component({
@@ -34,7 +33,7 @@ export class MyselectionComponent implements OnInit {
   console.log(res.data)
    console.log("Data Deleted") ; 
   })
- window.location.reload()
+  window.location.reload()
   }
 
 
