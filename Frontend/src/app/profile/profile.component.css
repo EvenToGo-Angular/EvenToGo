@@ -61,6 +61,7 @@
   transform: perspective(400px) rotateY(90deg);
   transform-origin: right;
   transition: 1s;
+  font-size: 25px;
 }
 
 .img-wrapper:hover h2 {

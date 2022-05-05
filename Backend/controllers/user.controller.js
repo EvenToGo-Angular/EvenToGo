@@ -92,7 +92,7 @@ var signIn = (req, res) => {
         if (err) {
             res.send(err)
         }
-        if (result) {
+        if (result && result.length) {
             try {
 
                 console.log("getuser"+JSON.stringify(result)  )
@@ -118,6 +118,15 @@ var signIn = (req, res) => {
                          }
                     }
                 );
+                         token = jwt.sign({ress}, 'secretkey',{expiresIn:'1h'});
+     return res.status(200).json({
+         title: 'login success',
+        token: token,
+        result: ress,
+        ress:ress[0].id,
+        role:ress[0].role, 
+        username:ress[0].name
+       })
             } catch (err) {
                 // res.send(err);
             console.log(err)
@@ -130,15 +139,7 @@ var signIn = (req, res) => {
         }
          // create a token and send to frontend
          
-         token = jwt.sign({ress}, 'secretkey',{expiresIn:'1h'});
-     return res.status(200).json({
-         title: 'login success',
-        token: token,
-        result: ress,
-        ress:ress[0].id,
-        role:ress[0].role, 
-        username:ress[0].name
-       })
+
     })
 }
 
