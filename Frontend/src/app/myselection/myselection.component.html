@@ -1,9 +1,23 @@
 <app-navbar></app-navbar>
-<div  *ngFor="let elem of arr">
+<!-- <div  *ngFor="let elem of arr">
 <p> {{elem.title}}</p>
 <p>{{elem.description}}</p>
 <p>{{elem.type}}</p>
 <p>{{elem.date}}</p>
 <img src = "{{elem.image}}">
 <button (click)="deleteFav($event)"id ='{{elem.id}}'> Delete </button>
+</div> -->
+<div class="cont">
+
+<div class="card"   *ngFor="let elem of arr">
+    <img class="card-img-top" src="{{elem.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{elem.title}}</h5>
+      <p class="card-text">{{elem.type}} <br>
+        {{elem.date}} <br>
+        {{elem.description}}
+    </p>
+    <button  class="btn btn-primary btn-lg" (click)="deleteFav($event)"id ='{{elem.id}}'> Delete </button>
+ </div>
+  </div>
 </div>

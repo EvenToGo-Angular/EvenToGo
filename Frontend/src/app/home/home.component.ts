@@ -1,7 +1,6 @@
 import { HomeService } from '../services/home.service';
 import { Component, OnInit } from '@angular/core';
-// import { Observable } from 'rxjs/Observable';
-// import 'rxjs/Rx';
+import axios from 'axios';
 
 
 @Component({
@@ -31,10 +30,20 @@ export class HomeComponent implements OnInit {
   postFavorite(event: any) {
     event.preventDefault();
     let id = event.target.value;
-    sessionStorage.setItem("id_event", id);
-    sessionStorage.setItem("id_user", this.user);
-    location.href = "/myselection";
-  }
+    console.log(event)
+  //  location.href = "/favorite";
+    var id_user = sessionStorage.getItem("id_user")
+    var obj = { user_id : id_user +" "+event.path[2].id }
+    axios.post("http://localhost:3000/api/favorite/addfav" ,obj).then(res=> {
+if(res.data=="Done"){
+console.log("Event Added")
+}
+else
+{
+  console.log("error") ;
+}
+})
+}
   edit(event: any) {
     event.preventDefault()
     console.log(event.target.value);

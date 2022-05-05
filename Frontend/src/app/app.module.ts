@@ -21,6 +21,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { MyselectionComponent } from './myselection/myselection.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -49,7 +50,8 @@ FullCalendarModule.registerPlugins([
     ContactsComponent,
     ProfileComponent,
     UpdateEventComponent,
-    MyselectionComponent
+    MyselectionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
