@@ -64,7 +64,7 @@
     <div class="card bg-dark text-white">
       <img [src]=elem.image class="card-img" alt="..." />
       <div class="card-img-overlay">
-        <button [value]=elem.id class="card-favorite" (click)="postFavorite($event)"> <svg
+        <button [value]=elem.id class="card-favorite" id="{{elem.id}}"  (click)="postFavorite($event)"> <svg
             xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-heart-fill"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
@@ -76,7 +76,7 @@
         <button [value]=elem.id href="#" class="btn btn-primary" (click)="edit($event)">
           Edit
         </button>
-        <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)"
+        <button [value]=elem.id  href="#" class="btn btn-danger" (click)="delet($event)"
         >
           Delete
         </button>

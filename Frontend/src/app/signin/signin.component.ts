@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import axios from 'axios';
 
 @Component({
   selector: 'app-signin',
@@ -36,7 +37,6 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {}
   onSubmit() {
     let person = this.checkoutForm.value;
-
     this.http
       .post(this.baseURL + 'api/user/signin', person)
       .subscribe((response) => {
@@ -44,7 +44,13 @@ export class SigninComponent implements OnInit {
         // console.log(this.dataReceived)
         sessionStorage.setItem('token', this.dataReceived.token);
         sessionStorage.setItem('role', this.dataReceived.role);
-
+        axios.get (`http://localhost:3000/api/user/connected/${person.email}`).then(res=> {
+        console.log(res.data[0].id,"test")  
+        var id = res.data[0].id.toString()
+          console.log(id , " " , typeof(id)) ;  
+     sessionStorage.setItem("id_user" , res.data[0].id.toString()) 
+          console.log("User added" ,  res.data) ; 
+        })
         var decodetToken = this.helper.decodeToken(this.dataReceived.token);
         console.log(decodetToken.ress[0]);
         this.isLogin = true;
