@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
     let id = event.target.value;
     sessionStorage.setItem("id_event", id);
     sessionStorage.setItem("id_user", this.user);
-    location.href = "/favorite";
+    location.href = "/myselection";
   }
   edit(event: any) {
     event.preventDefault()
@@ -69,10 +69,6 @@ export class HomeComponent implements OnInit {
   currentPlaces: any = null;
   count: any;
   decreasePlaces(event: any) {
-    // let token = sessionStorage.getItem("token")
-    // let decode = atob(token.split('.')[1]);
-    // console.log(decode);
-
     let id = event.target.id;
     this.currentPlaces = event.target.value;
     console.log(this.currentPlaces)
