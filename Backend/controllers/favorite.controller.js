@@ -29,12 +29,12 @@ res.send("Done") ;
 
 var getFavorite = (req, res)=> {
 var user = req.body.user ; 
-db.query(`select *  from favorite where id_user = '${user}'` ,(err,rezult)=>{ 
+db.query(`select *  from favorite where id_user = '${user}'` ,(err,result)=>{ 
 
 if(err)
 res.send("err")
 else 
-res.send(rezult)
+res.send(result)
 })
 }
 
