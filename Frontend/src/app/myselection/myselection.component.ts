@@ -17,9 +17,9 @@ export class MyselectionComponent implements OnInit {
   await  axios.post("http://localhost:3000/api/favorite/getFavorite", {user : user_id}).then(async (res)=>{
   for (let i= 0 ; i< res.data.length ;i ++){
   console.log(res.data[i].id_event)
-  await axios.get(`http://localhost:3000/api/event/selectOne/${res.data[i].id_event}`).then( async res1 => { 
-   console.log(res1.data)
- this.arr.push(res1.data[0]) ; 
+  await axios.get(`http://localhost:3000/api/event/selectOne/${res.data[i].id_event}`).then( async reslt => { 
+   console.log(reslt.data)
+ this.arr.push(reslt.data[0]) ; 
  })
 }
     })  
