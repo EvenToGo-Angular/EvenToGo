@@ -46,7 +46,7 @@ FullCalendarModule.registerPlugins([
     LandingPageComponent,
     ContactsComponent,
     ProfileComponent,
-    UpdateEventComponent
+    UpdateEventComponent,
     MyselectionComponent
   ],
   imports: [
