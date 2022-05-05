@@ -1,6 +1,8 @@
 import { HomeService } from '../services/home.service';
 import { Component, OnInit } from '@angular/core';
-import axios from "axios"
+import axios from 'axios';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
+    // const places = Observable.interval(1000)
   }
   getData() {
     this.homeService.getAllEvents().subscribe(
@@ -43,9 +46,10 @@ else
 })
 }
   edit(event: any) {
-  
+    event.preventDefault()
     console.log(event.target.value);
-   
+    sessionStorage.setItem("id", event.target.value)
+    location.href = "/modif";
   }
   delet(event: any) {
     event.preventDefault();
@@ -69,6 +73,22 @@ else
       }
     )
 
+  };
+
+
+  currentPlaces: any = null;
+  count: any;
+  decreasePlaces(event: any) {
+    let id = event.target.id;
+    this.currentPlaces = event.target.value;
+    console.log(this.currentPlaces)
+    this.count = this.currentPlaces - 1;
+    console.log(id, this.currentPlaces);
+    this.homeService.updatePlaces(id, this.count).subscribe((data) =>
+      this.getData()
+    )
   }
 }
+
+
 

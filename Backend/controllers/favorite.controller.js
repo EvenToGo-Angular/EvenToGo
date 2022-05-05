@@ -1,11 +1,7 @@
 var db = require("../database-mysql");
-const bcrypt = require("bcrypt")
 
-///////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////
-/**
- * Fradj : User/getAll
- */
+
+
 var selectAll = function (req, res) {
     db.query("SELECT * FROM favorite", (err, items, fields) => {
         if (err) {
