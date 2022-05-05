@@ -1,3 +1,5 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EventsComponent } from './events/events.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -15,6 +17,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MyselectionComponent } from './myselection/myselection.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -35,7 +40,12 @@ FullCalendarModule.registerPlugins([
     SigninComponent,
     UsersComponent,
     CalendarComponent,
-    LandingPageComponent
+    EventsComponent,
+    PageNotFoundComponent,
+    LandingPageComponent,
+    ContactsComponent,
+    ProfileComponent,
+    MyselectionComponent
   ],
   imports: [
     BrowserModule,

@@ -12,5 +12,10 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  handleSend(event: any) {
+    event.preventDefault()
+    alert("Message send Successfully .");
+    location.href=("")
+  }
 }
+

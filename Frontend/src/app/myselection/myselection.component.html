@@ -1,0 +1,8 @@
+<div  *ngFor="let elem of arr">
+<p> {{elem.title}}</p>
+<p>{{elem.description}}</p>
+<p>{{elem.type}}</p>
+<p>{{elem.date}}</p>
+<img src = "{{elem.image}}"> 
+<button (click)="deleteFav($event)"id ='{{elem.id}}'> Delete </button>
+</div>

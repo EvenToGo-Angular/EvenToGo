@@ -55,6 +55,13 @@ INSERT INTO `events` (`id`,`title`,`description`,`date`,`image`,`type`) VALUES
 (7,"Islamic gathering, Okba Ibn Nafea Mosque","Islamic lecture and ceremony with the presence of the mufti and imams, you are welcomed","05/28/2022 20:30","https://arabi21.com/Content/Upload/large/1120198225417775.jpg","Religious"),
 (8,"Beach Night Party, Bizert", "So much fun on bizert beach party, music and dance , be on Time!", "07/28/2022 20:00","https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/73/2020/02/04051939/SO-Sofitel-Hua-Hin-SO-Beach-Party-05-1-585x390.jpg","entertainment");
 
+INSERT INTO `contacts` (`id`,`name`,`email`,`subject`,`message`) VALUES
+  (1,"Imed Rahal","imed@rahal.com","Subject test 1", "This is a test message from Imed"),
+  (2,"Youssef Bedoui","youssef@rahal.com","Subject test 2", "This is a test message from Youssef"),
+  (3,"Amine Selmi","amine@rahal.com","Subject test 3", "This is a test message from Amine"),
+  (4,"Ala Oueslati  ","ala@rahal.com","Subject test 4", "This is a test message from Ala"),
+  (5,"Slim Guednez","slim@rahal.com","Subject test 5", "This is a test message from Slim"),
+  (6,"Kais Mellah","kais@rahal.com","Subject test 6", "This is a test message from Kais");
 
 
 /*  Execute this file from the command line by typing:
