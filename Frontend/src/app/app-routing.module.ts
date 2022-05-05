@@ -11,9 +11,11 @@ import { EventsComponent } from './events/events.component';
 import {UsersComponent} from './users/users.component'
 import {ProfileComponent} from './profile/profile.component'
 import {UpdateEventComponent} from './update-event/update-event.component'
+import {MyselectionComponent} from "./myselection/myselection.component"
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
+  {path:"myselection" , component:MyselectionComponent} , 
   { path: "home", component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
