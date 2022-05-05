@@ -10,6 +10,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { EventsComponent } from './events/events.component';
 import {UsersComponent} from './users/users.component'
 import {ProfileComponent} from './profile/profile.component'
+import {UpdateEventComponent} from './update-event/update-event.component'
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'update-event/:eventId', component: UpdateEventComponent },
 ];
 
 @NgModule({

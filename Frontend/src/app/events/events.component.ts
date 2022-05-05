@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { EventsService } from '../services/events.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -11,10 +12,12 @@ import { EventsService } from '../services/events.service';
 export class EventsComponent implements OnInit {
   url: any = '';
   type: string = '';
+  types:['Cultural,']
   constructor(
     private formBuilder: FormBuilder,
     private eventService: EventsService,
-    private http: HttpClient
+    private http: HttpClient,
+    private route: Router
   ) {}
 
   ngOnInit(): void {}
@@ -31,7 +34,7 @@ export class EventsComponent implements OnInit {
     console.log(event, 'event');
     this.eventService
       .addEvent(event)
-      .subscribe(() => console.log('event added'));
+      .subscribe(() => this.route.navigate(['/home']));
   }
   handleTypeEvent(event: any) {
     this.type = event.target.value;

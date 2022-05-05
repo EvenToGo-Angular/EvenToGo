@@ -19,6 +19,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -43,7 +44,8 @@ FullCalendarModule.registerPlugins([
     PageNotFoundComponent,
     LandingPageComponent,
     ContactsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UpdateEventComponent
   ],
   imports: [
     BrowserModule,

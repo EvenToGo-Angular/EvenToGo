@@ -73,12 +73,12 @@
         <p class="card-category" id="category"> {{ elem.type }}</p>
         <p class="card-date" id="date">{{ elem.date }}</p>
         <p class="card-description"> {{ elem.description }}</p>
-        <button [value]=elem.id href="#" class="btn btn-primary" (click)="edit($event)">
-          Edit
-        </button>
+          <a class="btn btn-primary mx-3" routerLink="/update-event/{{elem.id}}">
+            <i class="fa fa-pen mx-2"></i> Update 
+          </a>
         <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)"
         >
-          Delete
+        <i class="fa fa-trash-alt mx-2"></i> Delete
         </button>
       </div>
     </div>
