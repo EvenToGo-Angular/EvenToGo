@@ -64,28 +64,34 @@
     <div class="card bg-dark text-white">
       <img [src]=elem.image class="card-img" alt="..." />
       <div class="card-img-overlay">
-        <button [value]=elem.id class="card-favorite" (click)="postFavorite($event)"> <svg
-            xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-heart-fill"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-          </svg></button>
-        <h5 class="card-title" id="title">*{{ elem.title }}*</h5>
-        <p class="card-category" id="category"> {{ elem.type }}</p>
-        <p class="card-date" id="date">{{ elem.date }}</p>
-        <p class="card-description"> {{ elem.description }}</p>
-        <button [value]=elem.id href="#" class="btn btn-primary" (click)="edit($event)">
-          Edit
-        </button>
-        <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)"
-        >
-          Delete
-        </button>
+        <div id="top-Text-Container">
+          <div class="wrapper">
+            <button class="button interestedBtn" [value]=elem.places [id]=elem.id
+              (click)="decreasePlaces($event);">Places :{{elem.places}}</button>
+            <p id="reserve">Reserve NOW !</p>
+            <button [value]=elem.id class="card-favorite" (click)="postFavorite($event)"> <svg
+                xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-heart-fill"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+              </svg></button>
+          </div>
+          <h5 class="card-title" id="title">*{{ elem.title }}*</h5>
+          <p class="card-category" id="category"> {{ elem.type }}</p>
+          <p class="card-date" id="date">{{ elem.date }}</p>
+          <p class="card-description"> {{ elem.description }}</p>
+          <button [value]=elem.id href="#" class="btn btn-primary" (click)="edit($event)">
+            Edit
+          </button>
+          <button [value]=elem.id href="#" class="btn btn-danger" (click)="delet($event)">
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="footer">
-  <h4>&copy; EVENTOGO TUNISIA , All rights Reserved 2022-2023</h4>
-  <p>Thank you for visiting our website</p>
-</div>
+  <div id="footer">
+    <h4>&copy; EVENTOGO TUNISIA , All rights Reserved 2022-2023</h4>
+    <p>Thank you for visiting our website</p>
+  </div>

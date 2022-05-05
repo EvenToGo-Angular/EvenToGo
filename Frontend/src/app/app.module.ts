@@ -20,12 +20,14 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
 
+
+
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
   interactionPlugin
 ]);
 
-FullCalendarModule.registerPlugins([ 
+FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin
 ]);
@@ -54,7 +56,7 @@ FullCalendarModule.registerPlugins([
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
