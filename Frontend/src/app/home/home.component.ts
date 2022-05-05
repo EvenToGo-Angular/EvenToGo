@@ -32,10 +32,9 @@ export class HomeComponent implements OnInit {
     location.href = "/favorite";
   }
   edit(event: any) {
-    event.preventDefault()
+  
     console.log(event.target.value);
-    sessionStorage.setItem("id", event.target.value)
-    location.href = "/modif";
+   
   }
   delet(event: any) {
     event.preventDefault();

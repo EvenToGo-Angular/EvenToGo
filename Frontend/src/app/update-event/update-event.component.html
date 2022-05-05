@@ -1,12 +1,13 @@
 <app-navbar></app-navbar>
+
 <div style="margin-top: 100px">
   <!-- create Event Form -->
-
+  <!-- <pre>{{event |json}}</pre> -->
   <div class="container py-3 shadow">
     <div class="row">
-      <p class="h3 addEvent">Add Event</p>
+      <p class="h3 addEvent">Update Event</p>
       <div class="col">
-        <form [formGroup]="addEventForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="updateEventForm" (ngSubmit)="onSubmit()">
           <div class="mb-2 py-1">
             <input
               formControlName="title"
@@ -27,7 +28,8 @@
           <div class="form-outline"></div>
           <div class="mb-2 py-1">
             <select
-            class="form-control inputColor"
+              formControlName="type"
+              class="form-control inputColor"
               name="types"
               id="types"
               style="width: 100%; height: 50px"
@@ -48,20 +50,21 @@
               type="date"
             />
           </div>
-          <div class="form-control inputColor">
+          <!-- <div class="form-control inputColor">
             <label for="exampleFormControlFile1"
               >select event photo:</label
             >
             <input
+            
               type="file"
               class="form-control-file"
               (change)="onFileChange($event)"
             />
-          </div>
+          </div> -->
           <div class="mb-2 py-2">
             <input
               class="btn btn-secondary"
-              value="Create event"
+              value="Update event"
               type="submit"
               style="width: 100%"
             />
@@ -69,19 +72,15 @@
         </form>
       </div>
       <div class="col-sm-4">
-        <div class="imagePlace"> 
+        <div class="imagePlace">
           <img
-            *ngIf="url; else elseBlock"
-            [src]="url"
+            *ngIf="!url; else elseBlock"
+            src="{{ event.image }}"
             alt="image"
             class="rounded imageEvent"
           />
           <ng-template #elseBlock>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBQUOPilifGV4DMwcNLB2NK1E0GVCjQRtZg&usqp=CAU"
-              alt="image"
-              class="rounded imageEvent"
-            />
+            <img [src]="url" alt="image" class="rounded imageEvent" />
           </ng-template>
         </div>
       </div>
