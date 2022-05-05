@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
   postFavorite(event: any) {
+   
     event.preventDefault();
     let id = event.target.value;
     console.log(event)
@@ -38,7 +39,7 @@ export class HomeComponent implements OnInit {
 if(res.data=="Done"){
 console.log("Event Added")
 }
-else
+else 
 {
   console.log("error") ;
 }
