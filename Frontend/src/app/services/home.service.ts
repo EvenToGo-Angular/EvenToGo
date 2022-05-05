@@ -16,6 +16,10 @@ export class HomeService {
   public deleteEvent(id:number){
     return this.http.delete(`http://localhost:3000/api/event/delete/${id}`)
   }
+  public updatePlaces(id: any,places:any){
+    console.log(id, places);
+    return this.http.put(`http://localhost:3000/api/event/modif/${id}`,{places:places})
+  }
   get<T>(arg0: string) {
     throw new Error('Method not implemented.');
   }
