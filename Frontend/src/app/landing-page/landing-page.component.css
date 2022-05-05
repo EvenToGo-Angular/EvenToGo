@@ -15,6 +15,14 @@
 .navbar {
   height: 80px;
   font-weight: bold;
+  background-color: #ffffff20 ;
+  position:absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.nav-link{
+  font-size: large;
 }
 
 .navbar-brand {
@@ -29,13 +37,13 @@
 #more {
   width: 100%;
   height: 670px;
-  background: linear-gradient(rgba(3, 3, 3, 0.316) 100%, rgba(16, 16, 16, 0.156)), url("https://image-editing-services.com/wp-content/uploads/2018/10/about-us-background.jpg") no-repeat center;
+  background: linear-gradient(rgba(233, 36, 244, 0.547) 100%,rgba(228, 24, 255, 0.648)), url("https://image-editing-services.com/wp-content/uploads/2018/10/about-us-background.jpg") no-repeat center;
   padding-top: 100px;
   text-align: center;
 }
 #more h2 {
   margin-bottom: 30px;
-  color: rgb(138, 0, 87);
+  color: white;
   font-weight: bold;
   letter-spacing: 3px;
 }
@@ -71,30 +79,32 @@
 #start {
   height: 300px;
   text-align: center;
-  background: linear-gradient(rgba(38, 37, 38, 0.337) 100%, rgba(25, 25, 25, 0.08)), url("https://thumbs.dreamstime.com/z/login-protection-padlock-background-creative-glowing-digital-business-interface-blue-concept-d-rendering-161065385.jpg") no-repeat center;
+  background: linear-gradient(rgba(252, 0, 227, 0.606) 100%, rgba(252, 35, 223, 0.08)), url("https://as2.ftcdn.net/v2/jpg/01/79/78/21/1000_F_179782175_ViBZrvOlv2qhzbMGVpekzjTZh6ySmjx7.jpg") no-repeat center;
   display: flex;
+  background-size: cover;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 #start h2 {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   color: white;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.408);
 }
 
-#signin,
-#signup {
-  /* margin: 20px; */
-}
 
 #btnsContainer {
+  width: 70%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+btn btn-primary {
+  width: 150px;
 }
 
 #contactUs {
@@ -114,15 +124,12 @@
 }
 
 
-#contact {
-  background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm451-bg-06.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=efb1dd3d99a0a7075d5312c0d74bce8f") no-repeat;
-  background-size: cover;
-  height: 150px;
+#footer {
+  background: royalblue;
+  height: 80px;
   width: 100%;
-  color: black;
-  margin-top: 50px;
+  color: white;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.38);
   font-weight: bold;
   text-align: center;
   display: flex;
