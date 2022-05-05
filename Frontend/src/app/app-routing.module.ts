@@ -12,6 +12,7 @@ import {UsersComponent} from './users/users.component'
 import {ProfileComponent} from './profile/profile.component'
 import {UpdateEventComponent} from './update-event/update-event.component'
 import {MyselectionComponent} from "./myselection/myselection.component"
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
