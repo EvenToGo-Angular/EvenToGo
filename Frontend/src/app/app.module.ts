@@ -19,6 +19,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
 import { MyselectionComponent } from './myselection/myselection.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -45,6 +46,7 @@ FullCalendarModule.registerPlugins([
     LandingPageComponent,
     ContactsComponent,
     ProfileComponent,
+    UpdateEventComponent
     MyselectionComponent
   ],
   imports: [
